@@ -1,0 +1,144 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  :root {
+    --clr-1: #1e1e2e;
+    --clr-2: #313244;
+    --clr-3: #b4befe;
+    --clr-4: #89dceb;
+    --clr-5: #89dceb;
+  }
+  
+  body {
+    background: var(--clr-2);
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+    
+  }
+  html, body {
+    height: 100dvh;
+    width: 100dvw;
+  }
+  .card {
+    height:50dvh;
+    width: 70dvw;
+
+    background: var(--clr-1);
+    border-radius: 0.5rem;
+  
+    position: relative;
+  }
+  
+  .card::before,
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-4),
+      var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 5s linear infinite;
+  }
+  
+  .card::after {
+    filter: blur(3.5rem);
+  }
+  
+  @keyframes rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+  h1{
+    color: #cdd6f4;
+    font-family: sans-serif;
+    font-size: 1.5dvw;
+  }
+  .girl {
+    color: #bac2de;
+    font-family: sans-serif;
+    font-size: 1dvw;
+    margin-left: 1.5dvw;
+    margin-bottom: -1dvw;
+    white-space: nowrap;
+  }
+  .girl2 {
+    color: #a6adc8;
+    font-family: sans-serif;
+    font-size: .8dvw;
+    margin-left: 1.5dvw;
+    margin-bottom: -.2dvw
+  }
+  .girl3 {
+    color: #bac2de;
+    font-family: sans-serif;
+    font-size: 1dvw;
+    margin-left: 1.5dvw;
+  }
+  .hii {
+    margin-top: 3dvh;
+    margin-left: 1.5dvw;
+    
+  }
+  .power {
+    border-radius: 50dvw;
+    max-width: 9dvw;
+    margin-left: 1dvw;
+    margin-top: 1dvh;
+  }
+  .aboutmee {
+    float: right;
+    position: relative;
+    text-align: right;
+    top: -17dvh;
+    right: 2dvw;
+}
+.aboutmee h2 {
+    font-family: sans-serif;
+    color: #bac2de;
+      font-size: 1dvw;
+}
+.socials a  {
+    font-family: arial;
+     color: #a5adce;
+     text-decoration: inherit;
+     font-size: .8dvw
+}
+.socials {
+    position: relative;
+    right: -23dvw;
+    top: 11dvh;
+}
+.buttonDiv {
+    float: right;
+     position: absolute;
+     bottom: 45dvh;
+     left: 33.8dvw;
+    }
+.buttonDiv img {
+    max-width: 4dvw; 
+}
+   .buttondiv2 {
+    float: right;
+     position: absolute;
+     bottom: 42dvh;
+     left: 34.6dvw;
+ }
+ .buttondiv2 img {
+    max-width: 3dvw;
+
+ }
