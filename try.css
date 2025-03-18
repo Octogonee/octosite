@@ -1,4 +1,155 @@
-@property --gradient-angle {
+@media only screen and (min-width: 720px) and (min-height: 600px){  
+
+  @property --gradient-angle {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+    
+    :root {
+      --clr-1: #1e1e2e;
+      --clr-2: #313244;
+      --clr-3: #b4befe;
+      --clr-4: #89dceb;
+      --clr-5: #89dceb;
+    }
+    
+    body {
+      background: var(--clr-2);
+      min-height: 100dvh;
+      display: grid;
+      place-content: center;
+      
+    }
+    html, body {
+      height: 100dvh;
+      width: 100dvw;
+    }
+    .card {
+      height:50dvh;
+      width: 70dvw;
+  
+      background: var(--clr-1);
+      border-radius: 0.5rem;
+    
+      position: relative;
+    }
+    
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: -0.5rem;
+      z-index: -1;
+      background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-3),
+        var(--clr-4),
+        var(--clr-5),
+        var(--clr-4),
+        var(--clr-3)
+      );
+      border-radius: inherit;
+      animation: rotation 5s linear infinite;
+    }
+    
+    .card::after {
+      filter: blur(3.5rem);
+    }
+    
+    @keyframes rotation {
+      0% {
+        --gradient-angle: 0deg;
+      }
+      100% {
+        --gradient-angle: 360deg;
+      }
+    }
+    h1{
+      color: #cdd6f4;
+      font-family: sans-serif;
+      font-size: 1.5dvw;
+    }
+    .girl {
+      color: #bac2de;
+      font-family: sans-serif;
+      font-size: 1dvw;
+      margin-left: 1.5dvw;
+      margin-bottom: -1dvw;
+      white-space: nowrap;
+    }
+    .girl2 {
+      color: #a6adc8;
+      font-family: sans-serif;
+      font-size: .8dvw;
+      margin-left: 1.5dvw;
+      margin-bottom: -.2dvw
+    }
+    .girl3, .girl4 {
+      color: #bac2de;
+      font-family: sans-serif;
+      font-size: 1dvw;
+      margin-left: 1.5dvw;
+    }
+    .hii {
+      margin-top: 3dvh;
+      margin-left: 1.5dvw;
+      
+    }
+    .power {
+      border-radius: 50dvw;
+      max-width: 9dvw;
+      margin-left: 1dvw;
+      margin-top: 1dvh;
+    }
+    .aboutmee {
+      float: right;
+      position: absolute;
+      text-align: right;
+      top: 17dvh;
+      right: 2dvw;
+  }
+  .aboutmee h2 {
+      font-family: sans-serif;
+      color: #bac2de;
+        font-size: 1dvw;
+  }
+  .socials a  {
+      font-family: arial;
+       color: #a5adce;
+       text-decoration: inherit;
+       font-size: .8dvw
+  }
+  .socials {
+      position: absolute;
+      right: 25dvw;
+      top: 46dvh;
+  }
+  .buttonDiv {
+      float: right;
+       position: absolute;
+       bottom: 45dvh;
+       left: 34dvw;
+      }
+  .buttonDiv img {
+      max-width: 4dvw; 
+  }
+     .buttondiv2 {
+      float: right;
+       position: absolute;
+       bottom: 42dvh;
+       left: 34.6dvw;
+   }
+   .buttondiv2 img {
+      max-width: 3dvw;
+  
+   }
+   .fullscreen {
+    font-size: 0px;
+   }
+  }
+@media only screen and (max-width: 720px), (max-height: 600px){ 
+  @property --gradient-angle {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
@@ -14,22 +165,17 @@
   
   body {
     background: var(--clr-2);
-    min-height: 100dvh;
+    min-height: 100vh;
     display: grid;
     place-content: center;
-    
   }
-  html, body {
-    height: 100dvh;
-    width: 100dvw;
-  }
+  
   .card {
-    height:50dvh;
-    width: 70dvw;
-
+    height: 98vh;
+    width: 94vw;
     background: var(--clr-1);
     border-radius: 0.5rem;
-  
+     
     position: relative;
   }
   
@@ -48,7 +194,7 @@
       var(--clr-3)
     );
     border-radius: inherit;
-    animation: rotation 5s linear infinite;
+    animation: rotation 20s linear infinite;
   }
   
   .card::after {
@@ -63,82 +209,91 @@
       --gradient-angle: 360deg;
     }
   }
-  h1{
+  .hii{
     color: #cdd6f4;
     font-family: sans-serif;
-    font-size: 1.5dvw;
+    font-size: 6vw;
+    position: absolute;
+    top: -2dvh;
+    right: 1.9dvw;
   }
   .girl {
     color: #bac2de;
     font-family: sans-serif;
-    font-size: 1dvw;
-    margin-left: 1.5dvw;
-    margin-bottom: -1dvw;
-    white-space: nowrap;
+    position: absolute;
+    font-size: 3vw;
+    top: 4dvh;
+    right: 2.5vw;
   }
   .girl2 {
     color: #a6adc8;
     font-family: sans-serif;
-    font-size: .8dvw;
-    margin-left: 1.5dvw;
-    margin-bottom: -.2dvw
+    position: absolute;
+    font-size: 2dvw;
+    left: 67dvw;
+    top: 12vw;
   }
   .girl3 {
     color: #bac2de;
     font-family: sans-serif;
-    font-size: 1dvw;
-    margin-left: 1.5dvw;
+    position: absolute;
+    font-size: 3dvw;
+    left: 74dvw;
+    top: 14vw;
   }
-  .hii {
-    margin-top: 3dvh;
-    margin-left: 1.5dvw;
-    
+  .girl4 {
+    color: #bac2de;
+    font-family: sans-serif;
+    position: absolute;
+    font-size: 3dvw;
+    left: 67dvw;
+    top: 17vw;
   }
+
   .power {
     border-radius: 50dvw;
-    max-width: 9dvw;
+    max-width: 50vw;
     margin-left: 1dvw;
     margin-top: 1dvh;
   }
   .aboutmee {
     float: right;
-    position: relative;
-    text-align: right;
-    top: -17dvh;
-    right: 2dvw;
+    position: absolute;
+    text-align: left;
+
 }
 .aboutmee h2 {
     font-family: sans-serif;
     color: #bac2de;
-      font-size: 1dvw;
+      font-size: 3dvw;
 }
 .socials a  {
     font-family: arial;
      color: #a5adce;
      text-decoration: inherit;
-     font-size: .8dvw
+     font-size: 2.5dvw
 }
 .socials {
-    position: relative;
-    right: -23dvw;
-    top: 11dvh;
+    position: absolute;
+    right: 16dvw;
+    top: 96dvh;
 }
 .buttonDiv {
     float: right;
      position: absolute;
-     bottom: 45dvh;
-     left: 33.8dvw;
+     bottom: 25dvh;
+     left: 5vw;
     }
 .buttonDiv img {
-    max-width: 4dvw; 
+    max-width: 10dvw; 
 }
    .buttondiv2 {
     float: right;
      position: absolute;
-     bottom: 42dvh;
-     left: 34.6dvw;
+     bottom: 22dvh;
+     left: 4.4dvw;
  }
  .buttondiv2 img {
-    max-width: 3dvw;
+    max-width: 8vw;
 
- }
+}
