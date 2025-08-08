@@ -1,0 +1,128 @@
+<script src="https://iframe.chat/scripts/main.min.js"></script>
+<link rel="stylesheet" href="test.css">  
+   <div id="container">
+            <div id="headerArea">
+<div id="header" style="height: 330px;">    
+<img src="compres.gif" class="wide">
+</div>
+            </div>
+
+            <div id="flex">
+                <aside class="leftSidebar">
+                    <img class="fuckass" src="https://github.com/Octogonee/steam-dih-girl/blob/main/Downloads/fuckass%20bitch.gif?raw=true">  
+
+                    <div class="box">
+                      <img class="power" src="https://media1.tenor.com/m/2b-KzxiZnzkAAAAC/power-csm.gif">
+                    </div>
+                    <div class="box" style="height: 25%;">
+                      <h3> ♡ socials ♡ </h3>
+                      <a href="https://twitter.com/octogonee_" class="atwo" style="color: #ef9f76"> twitter </a>
+                      <a href="https://steamcommunity.com/id/octogone3656/" class="atwo" style="color: #ef9f76"> steam </a>
+                      <a href="https://open.spotify.com/user/31yxcvn3gc2ftpgl5efqrsnlsxju" class="atwo" style="color: #ef9f76"> spotify </a>
+                      <a href="https://www.roblox.com/users/308036105/profile" class="atwo" style="color: #ef9f76"> roblox </a>
+                    </div>
+                    <div class="buttondiv">
+                      <a href="https://cia.gov"><img src="https://getoctog.one/acab.gif"></a>
+                      <a href="https://discord.gg/tylerthecreator"><img src="https://cyber.dabamos.de/88x31/discord2.gif"> </a> 
+                      <a href="https://freecodecamp.org"><img src="https://getoctog.one/cssdif.gif"></a>
+                      <a href="https://pretendo.network"><img src="https://getoctog.one/wiiu.png"></a>
+                      <a href="https://firefox.com"><img src="https://getoctog.one/firefox4.gif" ></a>
+                      
+                    <div class="box" style="margin-top: 5px;">
+                    <img src="carwash.gif" class="carwash"> 
+                    </div>
+                    </div>
+                </aside>
+                <main>
+                    <iframe src='https://beta.iframe.chat/embed?chat=16417699' id='chattable' frameborder='none' style="width: 100%; height: 95%;"></iframe>
+                    <script>
+                      chattable.initialize({
+                      stylesheet : "chattable.css"
+                       });
+                    </script>
+        
+        
+                  <div class="box" style="position: absolute; bottom: 0; display: grid; grid-auto-flow: column; width: 91.5%;">
+                    <a href="index.html" style="color: #ef9f76; text-decoration: none; text-align: center;"> home </a>
+                    <a href="aboutme.html" style=" color: #ef9f76; text-decoration: none; text-align: center;"> about me </a>
+                  </div>
+
+                </main>
+                <aside class="rightSidebar">
+                    <img class="right" src="https://github.com/Octogonee/steam-dih-girl/blob/main/Downloads/right.gif?raw=true">
+                <div class="box">
+            <img class="gwen" src="https://cdn.discordapp.com/attachments/1399592055038148608/1402919366407880744/tenor1.gif?ex=6895a9f9&is=68945879&hm=26ce8670eca47fcecf75e1e867235574c0ded1c457defe88cd37aefbb7fa3c46&">
+            </div>
+            <div class="box" style="height: 25%;">
+            <div id="statuscafe" style="font-size:smaller; text-align: center;"><div id="statuscafe-username"><a href="https://status.cafe/users/so-ph" target="_blank" style="text-align: center;">octogone</a> </div> <b> <div id="statuscafe-content" style="text-align: center;"></div> </b> </div>
+            <script src="https://status.cafe/current-status.js?name=octogone" defer=""></script>
+          </div>
+            <div class="buttondiv">
+              <img src="https://getoctog.one/antinft.gif">
+              <img src="https://getoctog.one/anythingbut.gif">
+              <img src="https://getoctog.one/piracy.gif">
+              <img src="https://getoctog.one/antinazi.gif">
+              <img src="https://getoctog.one/bob.gif">
+            </div>
+            <audio id="musicPlayer" autoplay controls>
+    <source src="SpotiDownloader.com - A Cold Sunday - Lil Yachty.mp3" type="audio/mpeg">
+    <source src="SpotiDownloader.com - BOYFRIEND, GIRLFRIEND (2020 Demo) (feat. YG) - Tyler.mp3" type="audio/mpeg">
+    <source src="SpotiDownloader.com - Mirage - Orion Sun.mp3" type="audio/mpeg">
+    <source src="SpotiDownloader.com - GODSTAINED - Quadeca.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+    <script>
+          const songs = [
+    "SpotiDownloader.com - A Cold Sunday - Lil Yachty.mp3",
+    "SpotiDownloader.com - BOYFRIEND, GIRLFRIEND (2020 Demo) (feat. YG) - Tyler.mp3",
+    "SpotiDownloader.com - Mirage - Orion Sun.mp3",
+    "SpotiDownloader.com - GODSTAINED - Quadeca.mp3",
+  ];
+
+        const audioPlayer = document.getElementById("musicPlayer");
+        const playButton = document.getElementById("playButton");
+        let lastPlayedIndex = -1; 
+
+        // Set the initial volume
+        audioPlayer.volume = 0.05; 
+
+        function playRandomSong() {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * songs.length);
+            } while (randomIndex === lastPlayedIndex && songs.length > 1); // Avoid playing the same song consecutively if more than one song exists
+
+            audioPlayer.src = songs[randomIndex];
+            audioPlayer.load(); // Load the new audio source
+            audioPlayer.play();
+            lastPlayedIndex = randomIndex; // Update the last played song index
+        }
+
+        // Event listener for the "Play Random Song" button
+        if (playButton) { 
+            playButton.addEventListener("click", () => {
+                audioPlayer.muted = false; // Unmute on user interaction
+                playRandomSong();
+            });
+        }
+
+        // Event listener to play a new random song when the current one finishes
+        audioPlayer.addEventListener("ended", playRandomSong); 
+
+        // Initial play on page load (muted due to browser autoplay policies)
+        // If a play button is present, it's best to rely on that for initial playback.
+        // If there's no button and you absolutely need autoplay, be aware it will likely start muted
+        // and may require user interaction (like clicking an unmute button) to hear sound.
+        // If the playButton exists, the user will trigger playRandomSong() with their click.
+        // If there's no playButton, you'll need this line to start playback, but it will be muted.
+        if (!playButton) {
+            playRandomSong(); 
+        }
+
+    </script>
+        <h4 style="text-align: center;">picks one song <br>to play randomly<br>out of four</h4>
+        </aside>
+            </div>
+            
+        </div>
+    
